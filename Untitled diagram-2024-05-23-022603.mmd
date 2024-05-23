@@ -1,0 +1,30 @@
+classDiagram
+    Iphone --*  Reprodutor Musical
+    Iphone --* Aparelho Telefônico
+    Iphone --* Navegador na Internet
+    Iphone --* GPS
+    Rede  --> Iphone 
+    Rede de Satelite --> GPS
+    Rede <--> Rede de Satelite 
+    
+    class Reprodutor Musical{
+      +tocar()
+      +pausar()
+      +selecionarMusica(String musica)
+    }
+    class Aparelho Telefônico{
+      +ligar(String numero)
+      +atender()
+      + iniciarCorreioVoz()
+    }
+    class Navegador na Internet{
+      +exibirPagina(String url)
+      +adicionarNovaAba()
+      +atualizarPagina()
+    }
+    class GPS {
+        -dadosSatelite(string satelite)
+        +mapa()
+        #suaLocalizacao()
+
+    }
